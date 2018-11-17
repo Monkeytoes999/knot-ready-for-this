@@ -25,14 +25,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     // It will listen for messages that will start with `!`
 	
 	if (message.substring(0, 2) == 'yo') {
-	message = message.trim()
+	message = message.substring(2).trim()
         var args = message.substring(2).split(' ');
         var cmd = args[0];
 			
         args = args.splice(1);
         switch(cmd) {
             // !ping
-            case 'PING':
+            case 'Ping':
                 bot.sendMessage({
                     to: channelID,
                     message: 'Pong!'
