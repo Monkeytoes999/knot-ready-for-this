@@ -26,7 +26,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	
 	if (message.substring(0, 2) == 'yo') {
 	message = message.substring(2).trim()
-        var args = message.substring(2).split(' ');
+        var args = message.split(' ');
         var cmd = args[0];
 			
         args = args.splice(1);
