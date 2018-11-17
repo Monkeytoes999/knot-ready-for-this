@@ -1,9 +1,9 @@
 {
-  "name": "Collector Bot",
+  "name": "knot-ready-for-this",
   "version": "1.0.0",
-  "description": "Plz come back later for accurate description",
+  "description": "For helping with yoyoing",
   "main": "bot.js",
-  "author": "Graham",
+  "author": "GCD/B",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
     "mongodb-stitch-browser-sdk": "^4.0.14",
