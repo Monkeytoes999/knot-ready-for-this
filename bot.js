@@ -35,7 +35,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'Ping':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Pong!'
+                    message: 'pong!'
                 });
             break;
          }
