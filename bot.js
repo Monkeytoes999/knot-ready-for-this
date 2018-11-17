@@ -24,16 +24,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
 	
-	message = message.toUpperCase();
-	
-	if (user_data[userID] == undefined){
-		let userDataz = {
-			money: 0,
-			karma: 0,
-			pets: [0, 0, 0],
-
-	
-    if (message.substring(0, 2) == 'yo') {
+	if (message.substring(0, 2) == 'yo') {
 	message = message.trim()
         var args = message.substring(2).split(' ');
         var cmd = args[0];
