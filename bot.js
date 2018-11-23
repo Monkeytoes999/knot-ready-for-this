@@ -103,6 +103,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         args = args.splice(1);
         switch(cmd) {
             // !ping
+		case 'BOT':
+			bot.sendMessage({
+				to: channelID,
+				message: bot
+			});
+			break;
 		case 'ING':
 			if ((message.charCodeAt(4) > 47 && message.charCodeAt(4) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
 				bot.setPresence({
