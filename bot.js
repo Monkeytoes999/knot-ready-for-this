@@ -107,7 +107,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		case 'GOAWAY':
 			bot.sendMessage({
 				to: channelID,
-				message: disconnect[Math.floor(Math.random() * disconnect.length)];
+				message: disconnect[Math.floor(Math.random() * disconnect.length)]
 			});
 			bot.disconnect();
 		break;
