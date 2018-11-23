@@ -2,6 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
+var caseMess = '';
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -25,6 +26,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
 	
+	caseMess = message
 	message = message.toUpperCase();
 	
 	if (message.substring(0, 2) == 'YO') {
@@ -36,13 +38,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !ping
 		case 'ING':
-			console.log(message)
 			if ((message.charCodeAt(4) > 47 && message.charCodeAt(4) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
-				console.log(message);
 				bot.setPresence({
 				    game: {
 					    type: parseInt(message.substring(4, 5)),
-					    name: message.substring(6)
+					    name: caseMess.substring(9)
 				    }
 				});
 			}
