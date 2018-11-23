@@ -2,6 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
+var stati = ['online <:gdot:515555085078495243>', 'idle <:ydot:515555085166706728>', 'do not disturb <:rdot:515555085158449201>'];
 var ptlw = [':video_game: playing :video_game:', ':movie_camera: streaming :movie_camera:', ':headphones: listening to :headphones:', ':eyes: watching :eyes:'];
 var caseMess = '';
 var prevDay;
@@ -120,6 +121,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			if ((message.charCodeAt(7) > 48 && message.charCodeAt(7) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
 				bot.setPresence({
 				    status: colorDot[parseInt((message.substring(7, 8)) - 1)]
+				});
+				bot.sendMessage({
+					to: channelID,
+					message: 'My status is now ' + stati[parseInt((message.substring(7, 8)) - 1)]
 				});
 			}
 		break;
