@@ -104,6 +104,18 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         args = args.splice(1);
         switch(cmd) {
             // !ping
+		case 'TEST':
+			bot.sendMessage({
+			    to: channelID,
+			    message: 'oof'
+			}, function(err, res){
+				console.log(res)
+			    bot.addReaction({
+				channelID: channelID,
+				messageID: res.id,
+				reaction: ':green_heart:'
+			    });
+			});
 		case 'GOAWAY':
 			bot.sendMessage({
 				to: channelID,
