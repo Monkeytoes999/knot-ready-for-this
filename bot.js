@@ -7,8 +7,8 @@ var prevDay;
 var day;
 var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var playing = ['Yoyo simulator'];
-var listening = ['to the screams of orphans'];
-var watching = ['the wave rush towards me'];
+var listening = ['the screams of orphans'];
+var watching = ['you cry'];
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
