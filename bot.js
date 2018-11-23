@@ -40,6 +40,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			console.log(message.charCodeAt(7))
 			if ((message.charCodeAt(7) > 48 && message.charCodeAt(7) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
 				console.log('working')
+				console.log(message.substring(7, 8))
 				bot.setPresence({
 				    status: colorDot[parseInt((message.substring(7, 8)) - 1)]
 				});
