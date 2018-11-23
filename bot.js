@@ -111,11 +111,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}, function(err, res){
 				console.log(res)
 				for(var x = 0; x < 4; x++){
-				    bot.addReaction({
-					channelID: channelID,
-					messageID: res.id,
-					reaction: x + '\u20e3'
-				    });
+					setTimeout(() => {
+					    bot.addReaction({
+						channelID: channelID,
+						messageID: res.id,
+						reaction: x + '\u20e3'
+					    });
+					}, 1000);
 				}
 			});
 		break;
