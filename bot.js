@@ -116,6 +116,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				reaction: ':green_heart:'
 			    });
 			});
+		break;
 		case 'GOAWAY':
 			bot.sendMessage({
 				to: channelID,
