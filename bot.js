@@ -113,7 +113,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			    bot.addReaction({
 				channelID: channelID,
 				messageID: res.id,
-				reaction: 🤾‍♀️
+				reaction: '🤾‍♀️'
 			    });
 			});
 		break;
