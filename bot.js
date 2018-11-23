@@ -2,6 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
+var ptlw = [':video_game:playing:video_game:', ':movie_camera:streaming:movie_camera:', ':headphones:listening to:headphones:', ':eyes:watching:eyes:'];
 var caseMess = '';
 var prevDay;
 var day;
@@ -108,6 +109,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					    type: parseInt(message.substring(4, 5)),
 					    name: caseMess.substring(9)
 				    }
+				});
+				bot.sendMessage({
+					to: channelID,
+					message: 'I am now ' + ptlw[parseInt(message.substring(4,5))] + ' ' + caseMess.substring(9)
 				});
 			}
 			break;
