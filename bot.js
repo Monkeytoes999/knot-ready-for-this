@@ -36,9 +36,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !ping
 		case 'STATUS':
-			if ((message.charCodeAt(7) > 48 && message.charCodeAt(7) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
+			if ((message.charCodeAt(6) > 48 && message.charCodeAt(6) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
 				bot.setPresence({
-				    status: colorDot[message.substring(7, 8)]
+				    status: colorDot[message.substring(6, 7)]
 				});
 			}
 		break;
