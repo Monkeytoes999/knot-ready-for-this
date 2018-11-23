@@ -36,14 +36,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !ping
 		case 'ING':
-			if ((message.charCodeAt(4) > 48 && message.charCodeAt(4) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
+			if ((message.charCodeAt(5) > 48 && message.charCodeAt(5) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
 				bot.setPresence({
 				    game: {
-					    type: parseInt(message.substring(4, 5)),
-					    name: message.substring(6)
+					    type: parseInt(message.substring(5, 6)),
+					    name: message.substring(7)
 				    }
 				});
 			}
+			break;
 		case 'STATUS':
 			if ((message.charCodeAt(7) > 48 && message.charCodeAt(7) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
 				bot.setPresence({
