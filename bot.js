@@ -2,7 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
-var ptlw = [':video_game:playing:video_game:', ':movie_camera:streaming:movie_camera:', ':headphones:listening to:headphones:', ':eyes:watching:eyes:'];
+var ptlw = [':video_game: playing :video_game:', ':movie_camera: streaming :movie_camera:', ':headphones: listening to :headphones:', ':eyes: watching :eyes:'];
 var caseMess = '';
 var prevDay;
 var day;
