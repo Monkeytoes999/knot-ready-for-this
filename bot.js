@@ -226,7 +226,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			} else if (topRoleID == '491801015436181504'){
 				bot.sendMessage({
 					to: channelID,
-					message: 'You are a top-level Yoyoer. Nothing much I can do to help you'
+					message: 'You are a top-level Yoyo master. Nothing much I can do to help you'
 				});
 			}
 		break;
