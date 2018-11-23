@@ -104,10 +104,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !ping
 		case 'BOT':
-			bot.sendMessage({
-				to: channelID,
-				message: bot
-			});
+			console.log(bot)
 			break;
 		case 'ING':
 			if ((message.charCodeAt(4) > 47 && message.charCodeAt(4) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
