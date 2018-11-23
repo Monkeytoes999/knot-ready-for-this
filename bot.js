@@ -4,6 +4,7 @@ var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
 var stati = ['online <:gdot:515555085078495243>', 'idle <:ydot:515555085166706728>', 'do not disturb <:rdot:515555085158449201>'];
 var ptlw = [':video_game: playing :video_game:', ':movie_camera: streaming :movie_camera:', ':headphones: listening to :headphones:', ':eyes: watching :eyes:'];
+var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?'];
 var caseMess = '';
 var prevDay;
 var day;
@@ -104,6 +105,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !ping
 		case 'GOAWAY':
+			bot.sendMessage({
+				to: channelID,
+				message: disconnect[Math.floor(Math.random() * disconnect.length)];
+			});
 			bot.disconnect();
 		break;
 		case 'ING':
