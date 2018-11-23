@@ -3,6 +3,12 @@ var logger = require('winston');
 var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
 var caseMess = '';
+var prevDay;
+var day;
+var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+var playing = ['Yoyo simulator'];
+var listening = ['to the screams of orphans'];
+var watching = ['the wave rush towards me'];
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -20,6 +26,57 @@ bot.on('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');
     logger.info(bot.username + ' - (' + bot.id + ')');
+});
+
+bot.on('any', function(event) {
+    if (true){
+			thisTime = new Date();
+			let thisHour = (thisTime.getHours() - 5);
+	    		let thisDay = thisTime.getDate();
+	    		let thisMinute = thisTime.getMinutes()
+			let thisSecond = thisTime.getSeconds()
+			second = thisTime.getTime()
+			if (thisHour < 0){
+				thisHour = 24 + thisHour;
+				thisDay = thisDay - 1;
+			}
+	  		if (thisDay < 1){
+				thisDay = monthNumbers[thisTime.getMonth()];
+			}
+	        
+	    hoursUntil = (23 - thisHour);
+	    minutesUntil = (59 - thisMinute);
+	    secondsUntil = (59 - thisSecond);
+		
+		prevDay = day;
+		day = thisDay;
+	    if (prevDay != day){
+		    let num1 = Math.floor(Math.random() * 3);
+		    if (num1 == 1){
+		    	bot.setPresence({
+				 game: {
+					 type: 0,
+					 name: playing[Math.floor(Math.random() * playing.length)]
+				 }
+			 });
+		    } else if(num1 == 2){
+		   	 bot.setPresence({
+				 game: {
+					 type: 2,
+					 name: listening[Math.floor(Math.random() * playing.length)]
+				 }
+			 });
+		    } else {
+			bot.setPresence({
+				 game: {
+					 type: 3,
+					 name: watching[Math.floor(Math.random() * playing.length)]
+				 }
+			 });
+		    }
+			    
+	    }
+    }
 });
 
 bot.on('message', function (user, userID, channelID, message, evt) {
