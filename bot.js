@@ -36,7 +36,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !ping
 		case 'ING':
+			console.log(message)
 			if ((message.charCodeAt(5) > 48 && message.charCodeAt(5) < 52) && (userID == '393586279964475393' || userID == '486985623161274378')){
+				console.log(message);
 				bot.setPresence({
 				    game: {
 					    type: parseInt(message.substring(5, 6)),
