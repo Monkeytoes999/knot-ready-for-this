@@ -110,14 +110,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			    message: 'oof'
 			}, function(err, res){
 				console.log(res)
-				for(var x = 0; x < 4; x++){
-					setTimeout(() => {
+				for(var x = 0; x < 4; x = x){
 					    bot.addReaction({
 						channelID: channelID,
 						messageID: res.id,
 						reaction: x + '\u20e3'
+					    }, function(err, res){
+						    x++
 					    });
-					}, 1000);
 				}
 			});
 		break;
