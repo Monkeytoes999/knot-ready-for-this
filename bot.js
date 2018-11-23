@@ -125,10 +125,110 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
 				}
 			}
-			bot.sendMessage({
-				to: channelID,
-				message: topRoleID
-			});
+			if (topRoleID == '486667008881197066'){
+				bot.sendMessage({
+					to: channelID,
+					 embed: {
+						color: 65280,
+						title: "**Level 1**",
+						fields: [
+						    {
+							name: "The steps necesary for getting to level 2 are:",
+							value: '\nPut on and adjust string.\nWind string.\nBasic throw.\nAround the corner.\nWalk the dog.\nThe creeper.\nThe elevator.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/'
+						    }
+							]
+					 }
+				});
+			} else if (topRoleID == '486668435615383553'){
+				bot.sendMessage({
+					to: channelID,
+					 embed: {
+						color: 65280,
+						title: "**Level 2**",
+						fields: [
+						    {
+							name: "The steps necesary for getting to level 3 are:",
+							value: '\nThrow the baby.\nItzy-Bitzy baby.\nJamacain flag.\nRock the baby.\nOne handed star.\nEiffel Tower.\nSpelling Yo.\nThe cross.\nBig Tokyo tower.\nTwo handed star\n3D spaceship.\nBritish flag.\nFour-Leaf clover.\nRock the baby on the Eiffel Tower.\nDog bite.\nDarth Vader.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/'
+						    }
+							]
+					 }
+				});
+			} else if (topRoleID == '486668437360476177'){
+				bot.sendMessage({
+					to: channelID,
+					 embed: {
+						color: 65280,
+						title: "**Level 3**",
+						fields: [
+						    {
+							name: "The steps necesary for getting to level 4 are:",
+							value: '\nBreakaway.\nTerminology.\nMan on flying trapeze.\nMan on flying trapeze corrections.\nPinwheel.\nBrain scrambler.\nBrain twister.\nReverse flip front mount.\nSide mount flips.\nSplit bottom mount.\nMan on the flying trapeze and his brother.\nDouble or nothing.\nHoudini mount.\nUnder or nothing.\nOne and a half side mount.\nBrent.\nCross arm trapeze.\nCrazy 8.\nKamikaze mount.\nWrist mount.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/string-trick-basics/'
+						    }
+							]
+					 }
+				});
+			} else if (topRoleID == '486668450354429952'){
+				bot.sendMessage({
+					to: channelID,
+					 embed: {
+						color: 65280,
+						title: "**Level 4**",
+						fields: [
+						    {
+							name: "The steps necesary for getting to level 5 are:",
+							value: '\nHalley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nMan on the flying trapeze and his brother.\nSkin the gerbal.\nRipcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\nBoomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\nCross capture.\nKeymaker whip.\n1.5 hook.\nTMNT cafe.\nMach 5.\nMagic drop and shockwave.\nNinja vanish.\nMcPhee tower.\nSatoshi tower.\nSlack trapeze.\nJade whip.\nIron whip.\nGrey poupon.\nChopsticks switch.\nChopsticks double or nothing.\nChopsticks tower.\nChop suey.\nWax on, wax off.\nTitanium chopsticks.\nGondola.\nThe matrix.'
+						    }
+							]
+					 }
+				}, function(err, res){
+					bot.sendMessage({
+						to: channelID,
+						 embed: {
+							color: 65280,
+							title: "**Level 4**",
+							fields: [
+							    {
+								name: "The steps necesary for getting to level 5 (continued) are:",
+								value: 'Roller coaster.\nHydrogen bomb.\nRevolutions.\nBrent stole.\nSeasick.\nPop n\' fresh.\nBoingy Boing.\nGyroscopic flop.\nHot grind.\nKwyjibo.\nCalypso.\nGreen revolution.\nLord of the flies.\nCross arm trapeze.\nFollow.\nInstant magic knot.\nFollow trapeze.\nSerpentine.\nMonochrome.\nBouncy castle.\nSchmidt twist.\nQuantum slack.\nGhost neck.\nFunny bone.\nHorizontal basics.\nHorizontal skin the gerbil.\nMobius maneuver.\nSimple geometry.\nHorizontal circular Eli Hops.\nHorizontal behind the back.\nHorizontal Black Hops.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/string-tricks/'
+							    }
+								]
+						 }
+					});
+				});
+			} else if (topRoleID == '486668447833391137'){
+				bot.sendMessage({
+					to: channelID,
+					 embed: {
+						color: 65280,
+						title: "**Level 5**",
+						fields: [
+						    {
+							name: "The steps necesary for getting to level 6 are:",
+							value: 'Not done yet'
+						    }
+							]
+					 }
+				});
+			} else if (topRoleID == '486668446428299274'){
+				bot.sendMessage({
+					to: channelID,
+					 embed: {
+						color: 65280,
+						title: "**Level 6**",
+						fields: [
+						    {
+							name: "The steps necesary for getting to level 7 are:",
+							value: 'Not done yet'
+						    }
+							]
+					 }
+				});
+			} else if (topRoleID == '491801015436181504'){
+				bot.sendMessage({
+					to: channelID,
+					message: 'You are a top-level Yoyoer. Nothing much I can do to help you'
+				});
+			}
 		break;
             case 'PING':
                 bot.sendMessage({
