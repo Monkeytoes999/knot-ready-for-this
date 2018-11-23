@@ -110,11 +110,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			    message: 'oof'
 			}, function(err, res){
 				console.log(res)
-			    bot.addReaction({
-				channelID: channelID,
-				messageID: res.id,
-				reaction: '1\u20e3', '2\u20e3'
-			    });
+				for(var x = 0; x < 4; x++){
+				    bot.addReaction({
+					channelID: channelID,
+					messageID: res.id,
+					reaction: x + '\u20e3'
+				    });
+				}
 			});
 		break;
 		case 'GOAWAY':
