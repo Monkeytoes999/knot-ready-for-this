@@ -86,6 +86,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	caseMess = message
 	message = message.toUpperCase();
 	
+	if (!bot.directMessages[channelID]) {
+		serverID = bot.channels[channelID].guild_id;
+		channel = bot.channels[channelID];
+		member = bot.servers[serverID].members[userID];
+	}
+	
+	
 	if (message.substring(0, 2) == 'YO') {
 	message = message.substring(2).trim()
         var args = message.split(' ');
@@ -110,6 +117,20 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				    status: colorDot[parseInt((message.substring(7, 8)) - 1)]
 				});
 			}
+		break;
+		case 'LEVEL':
+			let topRoleID = '';
+			for (var iooof = 0; iooof < member.roles.length; iooof++){
+				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position > topRole){
+					if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 17){
+						topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
+					}
+				}
+			}
+			bot.sendMessage({
+				to: channelID,
+				message: topRoleID
+			});
 		break;
             case 'PING':
                 bot.sendMessage({
