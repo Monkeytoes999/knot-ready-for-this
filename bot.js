@@ -126,7 +126,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             if (message.substring(9, 27) == "I'll do it later"){
                 permi = 512
             }
-            permi = bot.servers[serverID].roles[permi].permissions
+            permi = bot.servers[serverID].roles[member.roles[permi]]
             var binaryPerm = []
             var count = 31
             while (count > 0){
