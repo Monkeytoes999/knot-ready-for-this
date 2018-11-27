@@ -6,6 +6,7 @@ var stati = ['online <:gdot:515555085078495243>', 'idle <:ydot:51555508516670672
 var ptlw = [':video_game: playing :video_game:', ':movie_camera: streaming :movie_camera:', ':headphones: listening to :headphones:', ':eyes: watching :eyes:'];
 var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?'];
 var caseMess = '';
+var roleList = ['Create Instant Invite','Kick Members','Ban Members','Administrator','Manage Channels','Manage Server','Add Reactions','View Audit Log','Priority Speaker','Error 512','View Channels','Send Messages','Send TTS Messages','Manage Messages','Embed Links','Attach Files','Read Message History','Mention Everyone','Use External Emojis','Error 524288','Connect','Speak','Mute Members','Deafen Members','Use Members','Use Voice Activity','Change Nickname','Manage Nicknames','Manage Roles','Manage Webhooks','Manage Emojis']
 var prevDay;
 var day;
 var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -117,6 +118,34 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			});
 		break;
+        case 'ROLEINFO':
+            var permi = 0
+            if (message.substring(9, 11) == '<@'){
+                permi = message.substring(11, 29)
+            }
+            if (message.substring(9, 27) == "I'll do it later"){
+                permi = 512
+            }
+            permi = bot.servers[serverID].roles[permi].permissions
+            var binaryPerm = []
+            var count = 31
+            while (count > 0){
+                count = count - 1
+                binaryPerm[binaryPerm.length] = false
+                if (permi >= 2**count){
+                    permi = permi - 2**count
+                    binaryPerm[binaryPerm.length - 1] = true
+                }
+            }
+            var roleString = ''
+            var a = binaryPerm.length
+            while (a > 0){
+                a = a - 1
+                if (binaryPerm[a - 1]){
+                    roleString = roleString + '\n' + roleList[a - 1]
+                }
+            }
+        break;
 		case 'GOAWAY':
 			bot.sendMessage({
 				to: channelID,
