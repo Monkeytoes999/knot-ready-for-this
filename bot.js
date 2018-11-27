@@ -145,6 +145,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     roleString = roleString + '\n' + roleList[a - 1]
                 }
             }
+            bot.sendMessage({
+                to: channelID,
+                message: 'prolog\n' + roleString + '\n```'})
         break;
 		case 'GOAWAY':
 			bot.sendMessage({
