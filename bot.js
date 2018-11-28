@@ -104,8 +104,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         	bot.sendMessage({
             	to: channelID,
             	embed: {
+			color: '#0000ff',
                 	title: 'Knot Ready For This',
-	                color: '0000ff',
         	        fields: [
                 	    {
                         	name: 'Basic Information',
