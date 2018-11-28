@@ -139,7 +139,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         case 'PIN':
             bot.sendMessage({
                 to: channelID,
-                message: caseMess.substring(7, message.length) + '\n\n-' + bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length)
+                message: caseMess.substring(7, caseMess.length) + '\n\n-' + bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length)
             }, function(err, res) {
                 bot.pinMessage({
                     channelID: channelID,
