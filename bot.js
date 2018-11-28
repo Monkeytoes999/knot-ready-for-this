@@ -365,7 +365,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         fields: [
                             {
                                 name: 'Help with tricks',
-                                value: parta
+                                value: parta,
+                            },
+                            {
+                                name: 'Informational Commands',
+                                value: partb,
+                            },
+                            {
+                                name: 'Important Announcement Commands',
+                                value: partc
                             }
                         ]
                     }})
