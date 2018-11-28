@@ -352,6 +352,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     if (a < imporCom.length){
                         partc = partc + ' `' + imporCom[a] + '`'
                     }
+                    a = a + 1
                 }
             break;
          }
