@@ -146,11 +146,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         break;
         case 'ROLEINFO':
             var permi = 0
-            if (message.substring(10, 13) == '<@&'){
-                permi = message.substring(13, 31)
+            if (message.substring(9, 12) == '<@&'){
+                permi = message.substring(12, 30)
             }
-            if (message.substring(10, 13) != '<@&'){
-                permi = message.substring(10, 28)
+            if (message.substring(9, 12) != '<@&'){
+                permi = message.substring(9, 27)
             }
             var roleUserID = permi
             permi = Object.values(bot.servers[serverID].roles).find(r => r.id  == permi)._permissions
