@@ -118,10 +118,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			});
 		break;
-        case 'pin':
+        case 'PIN':
             bot.sendMessage({
                 to: channelID,
-                message: message.substring(5, message.length) + '\n\n-' + bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length)
+                message: message.substring(4, message.length) + '\n\n-' + bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length)
             }, function(err, res) {
                 bot.pinMessage({
                     channelID: channelID,
