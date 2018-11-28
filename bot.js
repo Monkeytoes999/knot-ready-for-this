@@ -114,8 +114,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     	{
                         	name: 'Starting Information',
                         	value: 'Type **yo help** to begin.\nThis will display my commands.'}]}}, function(err, res){
-			console.log(err)
-			console.log(res)
 		})
     }
 	if (message.substring(0, 2) == 'YO') {
