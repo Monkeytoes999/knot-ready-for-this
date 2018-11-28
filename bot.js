@@ -13,6 +13,7 @@ var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var playing = ['Yoyo simulator', 'God', 'Cat and Mouse'];
 var listening = ['the screams of orphans', 'the voices in my head', 'the haters'];
 var watching = ['you cry', 'the sun bake. Wasting away again in Margarittaville'];
+var a = 0
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -335,6 +336,23 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Pong!'
                 });
+            break;
+            case 'HELP':
+                var parta = ''
+                var partb = ''
+                var partc = ''
+                a = 0
+                while (a < trickCom.length || a < infoCom.length || a < imporCom.length){
+                    if (a < trickCom.length){
+                        parta = parta + ' `' + trickCom[a] + '`'
+                    }
+                    if (a < infoCom.length){
+                        partb = partb + ' `' + infoCom[a] + '`'
+                    }
+                    if (a < imporCom.length){
+                        partc = partc + ' `' + imporCom[a] + '`'
+                    }
+                }
             break;
          }
      }
