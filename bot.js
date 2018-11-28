@@ -198,13 +198,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	    }
             bot.sendMessage({
                 to: channelID,
-                embed: {
-                    title: 'Role Information',
-                    color: Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color,
-                    fields: [
-                        {
-                            name: 'Complete list of Customized Features and Additions',
-                            value: roleHelper + '\n      Color: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color + '\nPermissions:' + roleString.toLowerCase() + '\n```'}]}})
+                message: roleHelper + '\n      Color: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color + '\nPermissions:' + roleString.toLowerCase() + '\n```'}]}})
         break;
 		case 'GOAWAY':
 			bot.sendMessage({
