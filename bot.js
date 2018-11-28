@@ -4,15 +4,15 @@ var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
 var stati = ['online <:gdot:515555085078495243>', 'idle <:ydot:515555085166706728>', 'do not disturb <:rdot:515555085158449201>'];
 var ptlw = [':video_game: playing :video_game:', ':movie_camera: streaming :movie_camera:', ':headphones: listening to :headphones:', ':eyes: watching :eyes:'];
-var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?'];
+var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?', 'Back to my corner I guess.'];
 var caseMess = '';
 var roleList = ['Create Instant Invite','Kick Members','Ban Members','Administrator','Manage Channels','Manage Server','Add Reactions','View Audit Log','Priority Speaker','Error 512','View Channels','Send Messages','Send TTS Messages','Manage Messages','Embed Links','Attach Files','Read Message History','Mention Everyone','Use External Emojis','Error 524288','Connect','Speak','Mute Members','Deafen Members','Use Members','Use Voice Activity','Change Nickname','Manage Nicknames','Manage Roles','Manage Webhooks','Manage Emojis']
 var prevDay;
 var day;
 var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-var playing = ['Yoyo simulator'];
-var listening = ['the screams of orphans'];
-var watching = ['you cry'];
+var playing = ['Yoyo simulator', 'God', 'Cat and Mouse'];
+var listening = ['the screams of orphans', 'the voices in my head', 'the haters'];
+var watching = ['you cry', 'the sun bake. Wasting away again in Margarittaville'];
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
