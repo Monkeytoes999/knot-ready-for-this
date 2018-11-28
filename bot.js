@@ -101,20 +101,24 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	}
 	
 	if (message.includes('<@513203673644531712>')){
-        bot.sendMessage({
-            to: channelID,
-            embed: {
-                title: 'Knot Ready For This',
-                color: '0000ff',
-                fields: [
-                    {
-                        name: 'Basic Information',
-                        value: 'My prefix is: yo',
-                    },
-                    {
-                        name: 'Starting Information',
-                        value: 'Type **yo help** to begin.\nThis will display my commands.'}]}})
-    }
+		console.log(true)
+		bot.sendMessage({
+		    to: channelID,
+		    embed: {
+			title: 'Knot Ready For This',
+			color: '0000ff',
+			fields: [
+			    {
+				name: 'Basic Information',
+				value: 'My prefix is: yo',
+			    },
+			    {
+				name: 'Starting Information',
+				value: 'Type **yo help** to begin.\nThis will display my commands.'}]}}, function(err, res){
+			console.log(err)
+			console.log(res)
+		});
+  	}
 	if (message.substring(0, 2) == 'YO') {
 	message = message.substring(2).trim()
         var args = message.split(' ');
