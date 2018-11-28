@@ -99,22 +99,20 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		channel = bot.channels[channelID];
 		member = bot.servers[serverID].members[userID];
 	}
-	
-	if (message.includes('<@513203673644531712>')){
-        	bot.sendMessage({
-            	to: channelID,
-            	embed: {
-			color: '3050971',
-                	title: 'Knot Ready For This',
-        	        fields: [
-                	    {
-                        	name: 'Basic Information',
-                        	value: 'My prefix is: yo',
-                   	    },
-                    	{
-                        	name: 'Starting Information',
-                        	value: 'Type **yo help** to begin.\nThis will display my commands.'}]}}, function(err, res){
-		})
+    if (message.includes('<@513203673644531712>')){
+        bot.sendMessage({
+            to: channelID,
+            embed: {
+                title: 'Knot Ready For This',
+                color: '0000ff',
+        	    fields: [
+                    {
+                        name: 'Basic Information',
+                        value: 'My prefix is: yo',
+                   	},
+                    {
+                    	name: 'Starting Information',
+                      	value: 'Type **yo help** to begin.\nThis will display my commands.'}]}})
     }
 	if (message.substring(0, 2) == 'YO') {
 	message = message.substring(2).trim()
@@ -376,7 +374,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     embed: {
                         title: 'This is the help section. Add `yo` to a command to use it.',
-                        color: '0000ff',
+                        color: 3050971,
                         fields: [
                             {
                                 name: 'Help with tricks',
