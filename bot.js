@@ -14,6 +14,9 @@ var playing = ['Yoyo simulator', 'God', 'Cat and Mouse'];
 var listening = ['the screams of orphans', 'the voices in my head', 'the haters'];
 var watching = ['you cry', 'the sun bake. Wasting away again in Margarittaville'];
 var a = 0
+var trickCom = ['level']
+var imporCom = ['pin']
+var infoCom = ['help','roleInfo']
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -354,6 +357,18 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     }
                     a = a + 1
                 }
+                bot.sendMessage({
+                    to: channelID,
+                    embed: {
+                        title: 'This is the help section. Add `yo` to a command to use it.',
+                        color: 0000ff,
+                        fields: [
+                            {
+                                name: 'Help with tricks',
+                                value: parta
+                            }
+                        ]
+                    }})
             break;
          }
      }
