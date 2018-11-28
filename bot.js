@@ -172,6 +172,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     roleString = roleString + '\n             ' + roleList[a - 1]
                 }
             }
+		console.log(roleString)
             var roleHelper = '```prolog\n       Name: "' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).name + '"\n         ID: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).id + '\n   Position: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).position + '\n    Managed: '
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).managed){
                 roleHelper = roleHelper + 'yes'
@@ -192,7 +193,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).hoist == false){
                 roleHelper = roleHelper + 'not displayed seperately'
-            }
+	    }
             bot.sendMessage({
                 to: channelID,
                 embed: {
