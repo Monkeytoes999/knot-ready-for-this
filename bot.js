@@ -157,24 +157,24 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
             var roleHelper = '```prolog\n       Name: "' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).name + '"\n         ID: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).id + '\n   Position: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).position + '\n    Managed: '
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).managed){
-                roleHelper = roleHelper + 'Yes'
+                roleHelper = roleHelper + 'yes'
             }
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).managed == false){
-                roleHelper = roleHelper + 'No'
+                roleHelper = roleHelper + 'no'
             }
             roleHelper = roleHelper + '\nMentionable: '
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).mentionable){
-                roleHelper = roleHelper + 'Yes'
+                roleHelper = roleHelper + 'yes'
             }
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).mentionable == false){
-                roleHelper = roleHelper + 'No'
+                roleHelper = roleHelper + 'no'
             }
             roleHelper = roleHelper + '\n      Hoist: '
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).hoist){
-                roleHelper = roleHelper + 'Displayed Seperately'
+                roleHelper = roleHelper + 'displayed seperately'
             }
             if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).hoist == false){
-                roleHelper = roleHelper + 'Not Displayed Seperately'
+                roleHelper = roleHelper + 'not displayed seperately'
             }
             bot.sendMessage({
                 to: channelID,
@@ -184,7 +184,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     fields: [
                         {
                             name: 'Complete list of Customized Features and Additions',
-                            value: roleHelper + '\n      Color: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color + '\nPermissions:' + roleString + '\n```'}]}})
+                            value: roleHelper + '\n      Color: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color + '\nPermissions:' + roleString.toLowerCase + '\n```'}]}})
         break;
 		case 'GOAWAY':
 			bot.sendMessage({
