@@ -169,7 +169,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             while (a > 0){
                 a = a - 1
                 if (binaryPerm[binaryPerm.length - a]){
-                    roleString = roleString + '\n             ' + roleList[a - 1]
+                    roleString = roleString + '\n           ' + a.toString() + ')' + roleList[a - 1]
                 }
             }
             var roleHelper = '```prolog\n       Name: "' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).name + '"\n         ID: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).id + '\n   Position: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).position + '\n    Managed: '
