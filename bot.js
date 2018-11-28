@@ -12,7 +12,7 @@ var day;
 var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var playing = ['Yoyo simulator', 'God', 'Cat and Mouse'];
 var listening = ['the screams of orphans', 'the voices in my head', 'the haters'];
-var watching = ['you cry', 'the sun bake. Wasting away again in Margarittaville'];
+var watching = ['you cry', 'the sun bake'];
 var a = 0
 var trickCom = ['level']
 var imporCom = ['pin']
