@@ -361,7 +361,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     embed: {
                         title: 'This is the help section. Add `yo` to a command to use it.',
-                        color: 0000ff,
+                        color: 00ff00,
                         fields: [
                             {
                                 name: 'Help with tricks',
