@@ -120,13 +120,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		break;
         case 'ROLEINFO':
             var permi = 0
-            if (message.substring(9, 11) == '<@'){
-                permi = message.substring(11, 29)
+            if (message.substring(10, 13) == '<@&'){
+                permi = message.substring(13, 31)
             }
-            if (message.substring(9, 27) == "I'll do it later"){
-                permi = 512
+            if (message.substring(10, 13) != '<@&'){
+                permi = message.substring(10, 28)
             }
-            permi = bot.servers[serverID].roles[member.roles[permi]]
+            var roleUserID = permi
+            permi = Object.values(bot.servers[serverID].roles).find(r => r.id  == permi)._permissions
             var binaryPerm = []
             var count = 31
             while (count > 0){
@@ -138,16 +139,43 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 }
             }
             var roleString = ''
-            var a = binaryPerm.length
+            a = binaryPerm.length
             while (a > 0){
                 a = a - 1
-                if (binaryPerm[a - 1]){
-                    roleString = roleString + '\n' + roleList[a - 1]
+                if (binaryPerm[binaryPerm.length - a]){
+                    roleString = roleString + '\n             ' + roleList[a - 1]
                 }
+            }
+            var roleHelper = '```prolog\n       Name: "' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).name + '"\n         ID: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).id + '\n   Position: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).position + '\n    Managed: '
+            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).managed){
+                roleHelper = roleHelper + 'Yes'
+            }
+            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).managed == false){
+                roleHelper = roleHelper + 'No'
+            }
+            roleHelper = roleHelper + '\nMentionable: '
+            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).mentionable){
+                roleHelper = roleHelper + 'Yes'
+            }
+            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).mentionable == false){
+                roleHelper = roleHelper + 'No'
+            }
+            roleHelper = roleHelper + '\n      Hoist: '
+            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).hoist){
+                roleHelper = roleHelper + 'Displayed Seperately'
+            }
+            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).hoist == false){
+                roleHelper = roleHelper + 'Not Displayed Seperately'
             }
             bot.sendMessage({
                 to: channelID,
-                message: 'prolog\n' + roleString + '\n```'})
+                embed: {
+                    title: 'Role Information',
+                    color: Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color,
+                    fields: [
+                        {
+                            name: 'Complete list of Customized Features and Additions',
+                            value: roleHelper + '\n      Color: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color + '\nPermissions:' + roleString + '\n```'}]}})
         break;
 		case 'GOAWAY':
 			bot.sendMessage({
