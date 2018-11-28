@@ -100,7 +100,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		member = bot.servers[serverID].members[userID];
 	}
 	
-	if (message.includes('<@513203673644531712>'){
+	if (message.includes('<@513203673644531712>')){
         bot.sendMessage({
             to: channelID,
             embed: {
