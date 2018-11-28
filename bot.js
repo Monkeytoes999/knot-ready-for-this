@@ -229,7 +229,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					 embed: {
-						color: 65280,
+						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						title: "**Level 1**",
 						fields: [
 						    {
@@ -243,7 +243,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					 embed: {
-						color: 65280,
+						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						title: "**Level 2**",
 						fields: [
 						    {
@@ -257,7 +257,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					 embed: {
-						color: 65280,
+						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						title: "**Level 3**",
 						fields: [
 						    {
@@ -271,7 +271,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					 embed: {
-						color: 65280,
+						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						title: "**Level 4**",
 						fields: [
 						    {
@@ -284,7 +284,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					bot.sendMessage({
 						to: channelID,
 						 embed: {
-							color: 65280,
+							color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 							title: "**Level 4**",
 							fields: [
 							    {
@@ -299,7 +299,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					 embed: {
-						color: 65280,
+						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						title: "**Level 5**",
 						fields: [
 						    {
@@ -313,7 +313,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					 embed: {
-						color: 65280,
+						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						title: "**Level 6**",
 						fields: [
 						    {
@@ -326,7 +326,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			} else if (topRoleID == '491801015436181504'){
 				bot.sendMessage({
 					to: channelID,
-					message: 'You are a top-level Yoyo master. Nothing much I can do to help you'
+					message: 'You are a top-level Yoyo master. Nothing much I can do to help you. The only way to get better is to do a Chinese Yo-Yo.'
 				});
 			}
 		break;
