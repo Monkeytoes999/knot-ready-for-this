@@ -252,7 +252,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						    }
 							]
 					 }
-				});
+				}, console.log);
 			} else if (topRoleID == '486668435615383553'){
 				bot.sendMessage({
 					to: channelID,
