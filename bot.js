@@ -248,7 +248,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						fields: [
 						    {
 							name: "The steps necesary for getting to level 2 are:",
-							value: '\nPut on and adjust string.\nWind string.\nBasic throw.\nAround the corner.\nWalk the dog.\nThe creeper.\nThe elevator.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/'
+							value: '\nPut on and adjust string.\nWind string.\nBasic throw.\nAround the corner.\nWalk the dog.\nThe creeper.\nThe elevator.\nThese tricks can be [here](\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/)'
 						    }
 							]
 					 }
@@ -262,7 +262,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						fields: [
 						    {
 							name: "The steps necesary for getting to level 3 are:",
-							value: '\nThrow the baby.\nItzy-Bitzy baby.\nJamacain flag.\nRock the baby.\nOne handed star.\nEiffel Tower.\nSpelling Yo.\nThe cross.\nBig Tokyo tower.\nTwo handed star\n3D spaceship.\nBritish flag.\nFour-Leaf clover.\nRock the baby on the Eiffel Tower.\nDog bite.\nDarth Vader.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/'
+							value: '\nThrow the baby.\nItzy-Bitzy baby.\nJamacain flag.\nRock the baby.\nOne handed star.\nEiffel Tower.\nSpelling Yo.\nThe cross.\nBig Tokyo tower.\nTwo handed star\n3D spaceship.\nBritish flag.\nFour-Leaf clover.\nRock the baby on the Eiffel Tower.\nDog bite.\nDarth Vader.\nThese tricks can be found [here](\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/)'
 						    }
 							]
 					 }
@@ -276,7 +276,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						fields: [
 						    {
 							name: "The steps necesary for getting to level 4 are:",
-							value: '\nBreakaway.\nTerminology.\nMan on flying trapeze.\nMan on flying trapeze corrections.\nPinwheel.\nBrain scrambler.\nBrain twister.\nReverse flip front mount.\nSide mount flips.\nSplit bottom mount.\nMan on the flying trapeze and his brother.\nDouble or nothing.\nHoudini mount.\nUnder or nothing.\nOne and a half side mount.\nBrent.\nCross arm trapeze.\nCrazy 8.\nKamikaze mount.\nWrist mount.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/string-trick-basics/'
+							value: '\nBreakaway.\nTerminology.\nMan on flying trapeze.\nMan on flying trapeze corrections.\nPinwheel.\nBrain scrambler.\nBrain twister.\nReverse flip front mount.\nSide mount flips.\nSplit bottom mount.\nMan on the flying trapeze and his brother.\nDouble or nothing.\nHoudini mount.\nUnder or nothing.\nOne and a half side mount.\nBrent.\nCross arm trapeze.\nCrazy 8.\nKamikaze mount.\nWrist mount.\nThese tricks can be [here](\nhttps://yoyotricks.com/yoyo-tricks/string-trick-basics/)'
 						    }
 							]
 					 }
@@ -303,7 +303,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							fields: [
 							    {
 								name: "The steps necesary for getting to level 5 (continued) are:",
-								value: 'Roller coaster.\nHydrogen bomb.\nRevolutions.\nBrent stole.\nSeasick.\nPop n\' fresh.\nBoingy Boing.\nGyroscopic flop.\nHot grind.\nKwyjibo.\nCalypso.\nGreen revolution.\nLord of the flies.\nCross arm trapeze.\nFollow.\nInstant magic knot.\nFollow trapeze.\nSerpentine.\nMonochrome.\nBouncy castle.\nSchmidt twist.\nQuantum slack.\nGhost neck.\nFunny bone.\nHorizontal basics.\nHorizontal skin the gerbil.\nMobius maneuver.\nSimple geometry.\nHorizontal circular Eli Hops.\nHorizontal behind the back.\nHorizontal Black Hops.\nThese tricks can be found on the link:\nhttps://yoyotricks.com/yoyo-tricks/string-tricks/'
+								value: 'Roller coaster.\nHydrogen bomb.\nRevolutions.\nBrent stole.\nSeasick.\nPop n\' fresh.\nBoingy Boing.\nGyroscopic flop.\nHot grind.\nKwyjibo.\nCalypso.\nGreen revolution.\nLord of the flies.\nCross arm trapeze.\nFollow.\nInstant magic knot.\nFollow trapeze.\nSerpentine.\nMonochrome.\nBouncy castle.\nSchmidt twist.\nQuantum slack.\nGhost neck.\nFunny bone.\nHorizontal basics.\nHorizontal skin the gerbil.\nMobius maneuver.\nSimple geometry.\nHorizontal circular Eli Hops.\nHorizontal behind the back.\nHorizontal Black Hops.\nThese tricks can be [here](\nhttps://yoyotricks.com/yoyo-tricks/string-tricks/)'
 							    }
 								]
 						 }
