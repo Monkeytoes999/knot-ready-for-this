@@ -235,7 +235,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		case 'LEVEL':
 			let topRoleID = '486667008881197066';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
-				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 11){
+				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 11 && bot.servers['429446593792442369'].roles[member.roles[iooof]].position > 4){
 					topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
 				}
 			}
