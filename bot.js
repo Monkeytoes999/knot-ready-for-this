@@ -170,11 +170,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             b = 0
             while (a > 0){
                 a = a - 1
-                if (binaryPerm[binaryPerm.length - a] && b < 10){
+                if (binaryPerm[binaryPerm.length - a] && b < 9){
                     b = b + 1
                     roleString = roleString + '\n          ' + b.toString() + ': ' + roleList[a - 1]
                 }
-                if (binaryPerm[binaryPerm.length - a] && b >= 10){
+                if (binaryPerm[binaryPerm.length - a] && b >= 9){
                     b = b + 1
                     roleString = roleString + '\n         ' + b.toString() + ': ' + roleList[a - 1]
                 }
