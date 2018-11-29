@@ -233,7 +233,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		break;
 		case 'LEVEL':
-			let topRoleID = '';
+			let topRoleID = '486667008881197066';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
 				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 11){
 					topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
@@ -252,7 +252,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						    }
 							]
 					 }
-				}, console.log);
+				});
 			} else if (topRoleID == '486668435615383553'){
 				bot.sendMessage({
 					to: channelID,
