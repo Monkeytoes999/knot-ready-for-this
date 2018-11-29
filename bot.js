@@ -396,12 +396,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 if (message == 'HELP ROLEINFO'){
                     bot.sendMessage({
                         to: channelID,
-                        message: '```md\nyo roleInfo {role}\n==================\n< {role} >\nThis can br a mention or ID of a role.\n< Purpose >\nThis will say the important information about a role.\n```'})
+                        message: '```md\nyo roleInfo {role}\n==================\n< role >\nThis can br a mention or ID of a role.\n< Purpose >\nThis will say the important information about a role.\n```'})
                 }
                 if (message == 'HELP PIN'){
                     bot.sendMessage({
                         to: channelID,
-                        message: '```md\nyo pin {message}\n================\n< {message} >\nThis message will be pinned along with the user that sent it.\n< Purpose >\nThis will pin an important message to a channel.\n```'})
+                        message: '```md\nyo pin {message}\n================\n< message >\nThis message will be pinned along with the user that sent it.\n< Purpose >\nThis will pin an important message to a channel.\n```'})
                 }
                 if (message == 'HELP LEVEL'){
                     bot.sendMessage({
@@ -411,7 +411,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 if (message == 'HELP HELP'){
                     bot.sendMessage({
                         to: channelID,
-                        message: '```md\nyo help {command}\n=================\n< {command} >\nPut the command in question here.\nLeaving this blank will list all commands.\n< Purpose >\nThis will show the syntax and purpose of the command.\n```'})
+                        message: '```md\nyo help {command}\n=================\n< command >\nPut the command in question here.\nLeaving this blank will list all commands.\n< Purpose >\nThis will show the syntax and purpose of the command.\n```'})
                 }
             break;
          }
