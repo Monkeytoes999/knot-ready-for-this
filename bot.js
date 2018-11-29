@@ -402,7 +402,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 if (message == 'HELP LEVEL'){
                     bot.sendMessage({
                         to: channelID,
-                        message: '```md\nyo level\n========\n< Purpose >\nThis will tell you your level and the tricks needed to advance in level.\n```})
+                        message: '```md\nyo level\n========\n< Purpose >\nThis will tell you your level and the tricks needed to advance in level.\n```'})
                 }
                 if (message == 'HELP HELP'){
                     bot.sendMessage({
