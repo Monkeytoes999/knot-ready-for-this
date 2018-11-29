@@ -340,7 +340,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			} else if (topRoleID == '491801015436181504'){
 				bot.sendMessage({
 					to: channelID,
-					message: 'You are a top-level Yoyo master. Nothing much I can do to help you. The only way to get better is to do a Chinese Yo-Yo.'
+					message: 'You are a top-level Yoyo master. Nothing much I can do to help you. The only way to get better is to do a Chinese Yo-Yo. Or you can choose to not listen to bret (<@486985623161274378>)'
 				});
 			}
 		break;
