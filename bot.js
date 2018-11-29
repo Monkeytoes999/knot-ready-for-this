@@ -10,7 +10,7 @@ var roleList = ['Create Instant Invite','Kick Members','Ban Members','Administra
 var prevDay;
 var day;
 var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-var playing = ['Yoyo simulator', 'God', 'Cat and Mouse'];
+var playing = ['Yoyo simulator', 'God', 'Cat and Mouse', 'With the Past', 'With Physics'];
 var listening = ['the screams of orphans', 'the voices in my head', 'the haters'];
 var watching = ['you cry', 'the sun bake'];
 var a = 0
