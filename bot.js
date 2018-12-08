@@ -107,7 +107,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 title: 'The Helpful Yo-Yo Bot',
                 author: {
                     name: 'Knot Ready For This',
-                    url: 'https://discordapp.com',
                     icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712l/' + bot.users[513203673644531712].avatar + '.png?size=32',
                 },
                 footer: {
@@ -314,17 +313,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         description: 'Unresponsive basics',
 						fields: [
 						    {
-							    name: "It's hard for me to say I'm sorry",
+							    name: 'Not a Topic',
                                 inline: true,
 							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.\nRipcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\n',
                             },
                             {
-                                name: 'for keeping these here',
+                                name: 'Not a Group',
                                 inline: true,
                                 value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\nCross capture.\nKeymaker whip.\n1.5 hook.\nTMNT cafe.\nMach 5.\nMagic drop and shockwave.\nNinja vanish.',
                             },
                             {
-                                name: 'and I want you to know :arrow_heading_down:',
+                                name: 'Not a Section',
                                 inline: true,
                                 value: 'McPhee tower.\nSatoshi tower.\nSlack trapeze.\nJade whip.\nIron whip.\nGrey poupon.\nChopsticks switch.\nChopsticks double or nothing.\nChopsticks tower.\nChop suey.\nWax on, wax off.\nTitanium chopsticks.\nGondola.\nThe matrix.'
 						    }
