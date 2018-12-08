@@ -319,8 +319,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                                 value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n',
                             },
                             {
-                                name: '<:YoYoImage:520781538527281192>',
-                                value: 'Learn these tricks to advance in level',
+                                name: '\nThis is the unresponsive basics level.',
+                                value: '\n',
                             },
                             {
                                 name: 'Section 4',
