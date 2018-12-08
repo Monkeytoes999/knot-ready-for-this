@@ -290,23 +290,37 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					 embed: {
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
+                        author: {
+                            name: 'author name',
+                            url: 'https://discordapp.com',
+                            icon_url: 'https://cdn.discordapp.com/embed/avatars/3.png',
+                        },
+                        footer: {
+                            icon_url: 'https://cdn.discordapp.com/embed/avatars/3.png',
+                            text: 'Try to master some of these tricks',
+                        },
+                        timestamp: new Date(),
 						title: '**Level 4**',
-                        description: 'The steps necesary for getting to level 5 are:\n\n\n',
+                        description: 'The steps necesary for getting to level 5 are:',
 						fields: [
 						    {
 							    name: 'Section 1',
                                 inline: true,
-							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.\n\n\n',
+							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.',
                             },
                             {
                                 name: 'Section 2',
                                 inline: true,
-                                value: 'Ripcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\n\n\n',
+                                value: 'Ripcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\n',
                             },
                             {
                                 name: 'Section 3',
                                 inline: true,
-                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n\n\n',
+                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n',
+                            },
+                            {
+                                name: '<:YoYoImage:520781538527281192>',
+                                value: 'Learn these tricks to advance in level',
                             },
                             {
                                 name: 'Section 4',
