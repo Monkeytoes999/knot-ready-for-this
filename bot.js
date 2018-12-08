@@ -291,7 +291,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					 embed: {
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
                         author: {
-                            name: 'author name',
+                            name: 'Knot Ready For This',
                             url: 'https://discordapp.com',
                             icon_url: 'https://cdn.discordapp.com/embed/avatars/3.png',
                         },
