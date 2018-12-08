@@ -293,10 +293,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         author: {
                             name: 'Knot Ready For This',
                             url: 'https://discordapp.com',
-                            icon_url: 'https://cdn.discordapp.com/avatars/' + 513203673644531712l + '/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712l/' + bot.users[513203673644531712].avatar + '.png?size=32',
                         },
                         footer: {
-                            icon_url: 'https://cdn.discordapp.com/avatars/' + 513203673644531712 + '/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users[513203673644531712].avatar + '.png?size=32',
                             text: 'Try to master some of these tricks',
                         },
                         timestamp: new Date(),
