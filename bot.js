@@ -104,7 +104,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         bot.sendMessage({
             to: channelID,
             embed: {
-                title: 'Knot Ready For This',
+                title: 'The Helpful Yo-Yo Bot',
+                author: {
+                    name: 'Knot Ready For This',
+                    url: 'https://discordapp.com',
+                    icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712l/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                },
+                footer: {
+                    icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                    text: 'Startup Information',
+                },
+                timestamp: new Date(),
                 color: 3050971,
         	    fields: [
                     {
