@@ -291,22 +291,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					 embed: {
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						title: '**Level 4**',
-                        description: 'The steps necesary for getting to level 5 are:',
+                        description: 'The steps necesary for getting to level 5 are:\n',
 						fields: [
 						    {
 							    name: 'Section 1',
                                 inline: true,
-							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.\n',
+							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.\n\n',
                             },
                             {
                                 name: 'Section 2',
                                 inline: true,
-                                value: 'Ripcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\n',
+                                value: 'Ripcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\n\n',
                             },
                             {
                                 name: 'Section 3',
                                 inline: true,
-                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n',
+                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n\n',
                             },
                             {
                                 name: 'Section 4',
