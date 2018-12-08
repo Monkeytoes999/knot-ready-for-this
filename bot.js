@@ -301,7 +301,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         },
                         timestamp: new Date(),
 						title: '**Level 4**',
-                        description: 'The steps necesary for getting to level 5 are:',
+                        description: 'Unresponsive basics\n',
 						fields: [
 						    {
 							    name: 'Section 1',
@@ -319,7 +319,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                                 value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n',
                             },
                             {
-                                name: '\nThis is the unresponsive basics level.',
+                                name: '\n',
                                 value: '\n',
                             },
                             {
