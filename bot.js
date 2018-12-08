@@ -4,7 +4,7 @@ var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
 var stati = ['online <:gdot:515555085078495243>', 'idle <:ydot:515555085166706728>', 'do not disturb <:rdot:515555085158449201>'];
 var ptlw = [':video_game: playing :video_game:', ':movie_camera: streaming :movie_camera:', ':headphones: listening to :headphones:', ':eyes: watching :eyes:'];
-var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?', 'Back to my corner I guess.', 'I guess you lame dawgs cannot deal with a party animal such as myself.\nI am outta here.'];
+var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?', 'Back to my corner I guess.', 'I guess you lame dawgs cannot deal with a party animal such as myself.\nI am outta here.','_**Is this the end for our caped crusader?**_\n_**Will the knots win?**_\n_**Tune in next time on Yo-Yo Random Stangers!**_'];
 var caseMess = '';
 var roleList = ['Create Instant Invite','Kick Members','Ban Members','Administrator','Manage Channels','Manage Server','Add Reactions','View Audit Log','Priority Speaker','Error 512','View Channels','Send Messages','Send TTS Messages','Manage Messages','Embed Links','Attach Files','Read Message History','Mention Everyone','Use External Emojis','Error 524288','Connect','Speak','Mute Members','Deafen Members','Use Members','Use Voice Activity','Change Nickname','Manage Nicknames','Manage Roles','Manage Webhooks','Manage Emojis']
 var prevDay;
@@ -107,10 +107,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 title: 'The Helpful Yo-Yo Bot',
                 author: {
                     name: 'Knot Ready For This',
-                    icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712l/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                    icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712l/' + bot.users['513203673644531712'].avatar + '.png?size=32',
                 },
                 footer: {
-                    icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                    icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
                     text: 'Startup Information',
                 },
                 timestamp: new Date(),
@@ -302,10 +302,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         author: {
                             name: 'Knot Ready For This',
                             url: 'https://discordapp.com',
-                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712l/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712l/' + bot.users['513203673644531712'].avatar + '.png?size=32',
                         },
                         footer: {
-                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users[513203673644531712].avatar + '.png?size=32',
+                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
                             text: 'Try to master some of these tricks',
                         },
                         timestamp: new Date(),
