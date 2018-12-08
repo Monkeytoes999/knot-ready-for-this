@@ -122,7 +122,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                    	},
                     {
                     	name: 'Starting Information',
-                      	value: 'Type **yo help** to begin.\nThis will display my commands.'}]}})
+                      	value: 'Type ``yo help`` to begin.\nThis will display my commands.'}]}})
     }
 	if (message.substring(0, 2) == 'YO') {
 	message = message.substring(2).trim()
