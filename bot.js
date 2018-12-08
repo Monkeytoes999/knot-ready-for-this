@@ -319,10 +319,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                                 value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n',
                             },
                             {
-                                name: '\n',
-                                value: '\n',
-                            },
-                            {
                                 name: 'Section 4',
                                 inline: true,
                                 value: 'Cross capture.\nKeymaker whip.\n1.5 hook.\nTMNT cafe.\nMach 5.\nMagic drop and shockwave.\nNinja vanish.',
