@@ -311,7 +311,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         },
                         timestamp: new Date(),
 						title: '**Level 4**',
-                        description: 'Unresponsive basics\n',
+                        description: 'Unresponsive basics',
 						fields: [
 						    {
 							    name: "It's hard for me to say I'm sorry",
