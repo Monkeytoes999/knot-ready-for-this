@@ -294,32 +294,32 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         description: 'The steps necesary for getting to level 5 are:',
 						fields: [
 						    {
-							    name: '\nSection 1',
+							    name: 'Section 1',
                                 inline: true,
-							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.',
+							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.\n',
                             },
                             {
-                                name: '\nSection 2',
+                                name: 'Section 2',
                                 inline: true,
-                                value: 'Ripcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.',
+                                value: 'Ripcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\n',
                             },
                             {
-                                name: '\nSection 3',
+                                name: 'Section 3',
                                 inline: true,
-                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.',
+                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\n',
                             },
                             {
-                                name: '\nSection 4',
+                                name: 'Section 4',
                                 inline: true,
                                 value: 'Cross capture.\nKeymaker whip.\n1.5 hook.\nTMNT cafe.\nMach 5.\nMagic drop and shockwave.\nNinja vanish.',
                             },
                             {
-                                name: '\nSection 5',
+                                name: 'Section 5',
                                 inline: true,
                                 value: 'McPhee tower.\nSatoshi tower.\nSlack trapeze.\nJade whip.\nIron whip.\nGrey poupon.\nChopsticks switch.',
                             },
                             {
-                                name: '\nSection 6',
+                                name: 'Section 6',
                                 inline: true,
                                 value: 'Chopsticks double or nothing.\nChopsticks tower.\nChop suey.\nWax on, wax off.\nTitanium chopsticks.\nGondola.\nThe matrix.'
 						    }
