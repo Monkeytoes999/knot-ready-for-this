@@ -290,14 +290,40 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					 embed: {
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-						title: "**Level 4**",
+						title: '**Level 4**',
+                        description: 'The steps necesary for getting to level 5 are:',
 						fields: [
 						    {
-							name: "The steps necesary for getting to level 5 are:",
-							value: '\nHalley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.\nRipcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\nBoomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\nCross capture.\nKeymaker whip.\n1.5 hook.\nTMNT cafe.\nMach 5.\nMagic drop and shockwave.\nNinja vanish.\nMcPhee tower.\nSatoshi tower.\nSlack trapeze.\nJade whip.\nIron whip.\nGrey poupon.\nChopsticks switch.\nChopsticks double or nothing.\nChopsticks tower.\nChop suey.\nWax on, wax off.\nTitanium chopsticks.\nGondola.\nThe matrix.'
+							    name: 'Section 1',
+                                inline: true,
+							    value: '\nHalley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.',
+                            },
+                            {
+                                name: 'Section 2',
+                                inline: true,
+                                value: 'Ripcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.',
+                            },
+                            {
+                                name: 'Section 3',
+                                inline: true,
+                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.',
+                            },
+                            {
+                                name: 'Section 4',
+                                inline: true,
+                                value: 'Cross capture.\nKeymaker whip.\n1.5 hook.\nTMNT cafe.\nMach 5.\nMagic drop and shockwave.\nNinja vanish.',
+                            },
+                            {
+                                name: 'Section 5',
+                                inline: true,
+                                value: 'McPhee tower.\nSatoshi tower.\nSlack trapeze.\nJade whip.\nIron whip.\nGrey poupon.\nChopsticks switch.',
+                            },
+                            {
+                                name: 'Section 6',
+                                inline: true,
+                                value: 'Chopsticks double or nothing.\nChopsticks tower.\nChop suey.\nWax on, wax off.\nTitanium chopsticks.\nGondola.\nThe matrix.'
 						    }
-							]
-					 }
+							]}
 				}, function(err, res){
 					bot.sendMessage({
 						to: channelID,
