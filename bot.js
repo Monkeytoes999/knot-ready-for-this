@@ -117,7 +117,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		case 'TEST':
 			bot.sendMessage({
 			    to: channelID,
-			    message: 'oof'
+			    message: 'I dunno'
 			}, function(err, res){
 				console.log(res)
 				bot.addReaction({
