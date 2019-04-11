@@ -284,6 +284,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					outd[outd.length] = outg;
 					oute[oute.length] = outh;
 					outf[outf.length] = outi;
+					a = a + 1;
 				}
 				console.log('Stage 4');
 				bot.sendMessage({
