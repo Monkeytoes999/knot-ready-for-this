@@ -321,12 +321,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 								inline: true,
 							},
 							{
-								name: baseline.substring(0, outD[0] + 1),
+								name: baseline.substring(0, outE[0] + 1),
 								value: oute[0],
 								inline: true,
 							},
 							{
-								name: baseline.substring(0, outD[0] + 1),
+								name: baseline.substring(0, outF[0] + 1),
 								value: outf[0],
 								inline: true
 				}]}})
