@@ -251,9 +251,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					}
 					a = a + 1;
 				}
-				var outd = [];
-				var oute = [];
-				var outf = [];
+				var outd = [''];
+				var oute = [''];
+				var outf = [''];
 				var outg = ['','',''];
 				a = 0;
 				var b = 0;
@@ -284,19 +284,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						fields: [
 							{
 								name: 'Test',
-								value: outd[0],
+								value: outd[1],
 								inline: true,
 							},
 							{
 								name: 'TEST',
-								value: oute[0],
+								value: oute[1],
 								inline: true,
 							},
 							{
 								name: 'test',
-								value: outf[0],
+								value: outf[1],
 								inline: true
-							}]}})
+				}]}})
 			}
 		break;
             case 'PING':
