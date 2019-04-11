@@ -241,6 +241,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var outb = ['b'];
 				var outc = ['c'];
 				var a = 0;
+				console.log('Stage 1');
 				while (a < levels[finalRole].length){
 					if (a % 3 == 0){
 						outa[outa.length] = levels[finalRole][a];
@@ -253,12 +254,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					}
 					a = a + 1;
 				}
+				console.log('Stage 2');
 				var outd = [''];
 				var oute = [''];
 				var outf = [''];
 				var outg = ['','',''];
 				a = 0;
 				var b = 0;
+				console.log('Stage 3');
 				while (a < outa.length){
 					b = 0;
 					outg = ['','',''];
@@ -278,7 +281,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					oute[oute.length] = outg[1];
 					outf[outf.length] = outg[2];
 				}
-				console.log('Here');
+				console.log('Stage 4');
 				bot.sendMessage({
 					to: channelID,
 					embed: {
