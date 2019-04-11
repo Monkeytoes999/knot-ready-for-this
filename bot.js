@@ -229,7 +229,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			var roleSearch = 0;
 			var finalRole = -1;
 			while (roleSearch < levels.length){
-				if (roll[roleSearch].equals(topRoleID)){
+				if (roll[roleSearch] == topRoleID){
 					finalRole = roleSearch;
 				}
 				roleSearch = roleSearch + 1;
