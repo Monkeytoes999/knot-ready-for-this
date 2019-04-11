@@ -297,7 +297,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					outf[a] = outi;
 					a = a + 1;
 				}
-				var letter = '═';
+				var letter = '0';
 				var baseline = '';
 				b = 0;
 				while (b < 50){
