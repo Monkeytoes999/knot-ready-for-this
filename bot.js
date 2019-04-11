@@ -236,12 +236,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				roleSearch = roleSearch + 1;
 			}
 			if (finalRole >= 0){
-				console.log('Detecting top role of ' + (finalRole));
 				var outa = ['a'];
 				var outb = ['b'];
 				var outc = ['c'];
 				var a = 0;
-				console.log('Stage 1');
 				while (a < levels[finalRole].length){
 					if (a % 3 == 0){
 						outa[outa.length] = levels[finalRole][a];
@@ -263,30 +261,28 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var outi = '';
 				a = 0;
 				var b = 0;
-				console.log('Stage 3');
 				while (a < outa.length){
 					b = 0;
 					outg = '';
 					outh = '';
 					outi = '';
 					while (b < 10){
-						if (outa.length < 10*a + b){
+						if (outa.length > 10*a + b){
 							outg = outg + '\n' + outa[10*a + b];
 						}
-						if (outb.length < 10*a + b){
+						if (outb.length > 10*a + b){
 							outh = outh + '\n' + outb[10*a + b];
 						}
-						if (outc.length < 10*a + b){
+						if (outc.length > 10*a + b){
 							outi = outi + '\n' + outc[10*a + b];
 						}
 						b = b + 1;
 					}
-					outd[outd.length] = outg;
-					oute[oute.length] = outh;
-					outf[outf.length] = outi;
+					outd[a] = outg;
+					oute[a] = outh;
+					outf[a] = outi;
 					a = a + 1;
 				}
-				console.log('Stage 4');
 				bot.sendMessage({
 					to: channelID,
 					embed: {
@@ -295,17 +291,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						fields: [
 							{
 								name: 'Test',
-								value: outd[1],
+								value: outd[0],
 								inline: true,
 							},
 							{
 								name: 'TEST',
-								value: oute[1],
+								value: oute[0],
 								inline: true,
 							},
 							{
 								name: 'test',
-								value: outf[1],
+								value: outf[0],
 								inline: true
 				}]}})
 			}
