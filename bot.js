@@ -223,7 +223,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			let topRoleID = '';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
 				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 17){
-					topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
+					if (roll.includes(bot.servers['429446593792442369'].roles[member.roles[iooof]].id)){
+						topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
+					}
 				}
 			}
 			var roleSearch = 0;
