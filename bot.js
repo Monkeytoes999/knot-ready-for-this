@@ -21,7 +21,7 @@ var levels = [['Put on and adjust string','Wind string','Basic throw','Around th
 							['none'],
 							['none']];
 var links = ['https://yoyotricks.com/yoyo-tricks/beginner-tricks/','https://yoyotricks.com/yoyo-tricks/picture-tricks/','https://yoyotricks.com/yoyo-tricks/string-trick-basics/','https://yoyotricks.com/yoyo-tricks/string-tricks/','https://yoyotricks.com/yoyo-tricks/unresponsive/','https://yoyotricks.com/yoyo-tricks/long-string-tricks/','none'];
-var roll = ['486667008881197066','486668435615383553','486668437360476177','486668450354429952','486668447833391137','486668446428299274','491801015436181504']
+var roll = ['486667008881197066','486668435615383553','486668437360476177','486668450354429952','486668447833391137','486668446428299274','491801015436181504'];
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -219,6 +219,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		break;
 		case 'LEVEL':
+			console.log('Detected yo level');
 			let topRoleID = '';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
 				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 17){
