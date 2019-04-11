@@ -300,17 +300,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						fields: [
 							{
-								name: '─────────────────',
+								name: '───────────────',
 								value: outd[0],
 								inline: true,
 							},
 							{
-								name: '─────────────────',
+								name: '───────────────',
 								value: oute[0],
 								inline: true,
 							},
 							{
-								name: '─────────────────',
+								name: '───────────────',
 								value: outf[0],
 								inline: true
 				}]}})
