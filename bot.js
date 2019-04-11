@@ -297,7 +297,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					outf[a] = outi;
 					a = a + 1;
 				}
-				var baseline = '--------------------------------------------------';
+				var letter = '█';
+				var baseline = '';
+				b = 0;
+				while (b < 50){
+					baseline = baseline + letter;
+					b = b + 1;
+				}
 				a = new Date()
 				bot.sendMessage({
 					to: channelID,
