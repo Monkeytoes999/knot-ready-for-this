@@ -258,28 +258,32 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var outd = [''];
 				var oute = [''];
 				var outf = [''];
-				var outg = ['','',''];
+				var outg = '';
+				var outh = '';
+				var outi = '';
 				a = 0;
 				var b = 0;
 				console.log('Stage 3');
 				while (a < outa.length){
 					b = 0;
-					outg = ['','',''];
+					outg = '';
+					outh = '';
+					outi = '';
 					while (b < 10){
 						if (outa.length < 10*a + b){
-							outg[0] = outg[0] + '\n' + outa[10*a + b];
+							outg = outg + '\n' + outa[10*a + b];
 						}
 						if (outb.length < 10*a + b){
-							outg[1] = outg[1] + '\n' + outb[10*a + b];
+							outh = outh + '\n' + outb[10*a + b];
 						}
 						if (outc.length < 10*a + b){
-							outg[2] = outg[2] + '\n' + outc[10*a + b];
+							outi = outi + '\n' + outc[10*a + b];
 						}
 						b = b + 1;
 					}
-					outd[outd.length] = outg[0];
-					oute[oute.length] = outg[1];
-					outf[outf.length] = outg[2];
+					outd[outd.length] = outg;
+					oute[oute.length] = outh;
+					outf[outf.length] = outi;
 				}
 				console.log('Stage 4');
 				bot.sendMessage({
