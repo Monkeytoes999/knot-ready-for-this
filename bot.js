@@ -219,7 +219,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		break;
 		case 'LEVEL':
-			console.log('Detected yo level');
 			let topRoleID = '';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
 				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 17){
@@ -236,7 +235,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				}
 				roleSearch = roleSearch + 1;
 			}
-			console.log('finalRole = ' + finalRole + '\ntopRoleID = ' + topRoleID);
 			if (finalRole >= 0){
 				console.log('Detecting top role of ' + (finalRole));
 				var outa = ['a'];
@@ -280,6 +278,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					oute[oute.length] = outg[1];
 					outf[outf.length] = outg[2];
 				}
+				console.log('Here');
 				bot.sendMessage({
 					to: channelID,
 					embed: {
