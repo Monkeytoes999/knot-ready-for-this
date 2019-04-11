@@ -236,9 +236,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				roleSearch = roleSearch + 1;
 			}
 			if (finalRole >= 0){
-				var outa = ['a'];
-				var outb = ['b'];
-				var outc = ['c'];
+				var outa = [];
+				var outb = [];
+				var outc = [];
 				var a = 0;
 				while (a < levels[finalRole].length){
 					if (a % 3 == 0){
