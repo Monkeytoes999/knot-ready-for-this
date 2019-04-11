@@ -297,7 +297,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					outf[a] = outi;
 					a = a + 1;
 				}
-				var baseline = '██████████████████████████████████████████████████';
+				var baseline = '--------------------------------------------------';
 				a = new Date()
 				bot.sendMessage({
 					to: channelID,
