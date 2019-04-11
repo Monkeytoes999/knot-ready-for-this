@@ -234,7 +234,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				}
 				roleSearch = roleSearch + 1;
 			}
-			console.log('finalRole = ' + finalRole);
+			console.log('finalRole = ' + finalRole + '\ntopRoleID = ' + topRoleID);
 			if (finalRole >= 0){
 				console.log('Detecting top role of ' + (finalRole));
 				var outa = ['a'];
