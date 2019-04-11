@@ -252,10 +252,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					}
 					a = a + 1;
 				}
-				console.log('Stage 2');
-				var outd = [''];
-				var oute = [''];
-				var outf = [''];
+				var outd = [];
+				var oute = [];
+				var outf = [];
 				var outg = '';
 				var outh = '';
 				var outi = '';
@@ -283,10 +282,21 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					outf[a] = outi;
 					a = a + 1;
 				}
+				a = new Date()
 				bot.sendMessage({
 					to: channelID,
 					embed: {
 						title: 'Level ' + (finalRole + 1),
+						timestamp: a,
+						author: {
+							name: 'Knot Ready For This',
+							url: 'https://yoyotricks.com/',
+							icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
+						},
+						footer: {
+							icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
+							text: 'Level Command',
+						},
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						fields: [
 							{
