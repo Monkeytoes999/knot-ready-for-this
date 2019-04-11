@@ -94,7 +94,7 @@ bot.on('any', function(event) {
 
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
+    // It will listen for messages that will start with `yo`
 	
 	caseMess = message
 	message = message.toUpperCase();
@@ -268,9 +268,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					outg = '';
 					outh = '';
 					outi = '';
-					outD[a] = 0;
-					outE[a] = 0;
-					outF[a] = 0;
+					outD[a] = 20;
+					outE[a] = 20;
+					outF[a] = 20;
 					while (b < 10){
 						if (outa.length > 10*a + b){
 							outg = outg + '\n' + outa[10*a + b];
