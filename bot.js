@@ -260,7 +260,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		break;
 		case 'CHECKLIST':
-			if (bot.server['429446593792442369'].roles[member.roles[0]] = '486676069492195348'){
+			if (bot.servers['429446593792442369'].roles[member.roles[0]] = '486676069492195348'){
 				let peeps = [];
 				let peepsIds = [];
 				let peepsChannels = [];
