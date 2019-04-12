@@ -172,8 +172,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 permi = message.substring(9, 27)
             }
             var roleUserID = permi
-	    if (Object.values(bot.servers[serverID].roles).find(r => r.id  == permi) != undefined){
-	            permi = Object.values(bot.servers[serverID].roles).find(r => r.id  == permi)._permissions
+	    if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID) != undefined){
+	            permi = Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID)._permissions
+	    }
+	    if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID) == undefined){
+	            console.log(Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID))
 	    }
             var binaryPerm = []
             var count = 31
