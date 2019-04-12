@@ -13,6 +13,15 @@ var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var playing = ['Yoyo simulator', 'God', 'Cat and Mouse', 'With the Past', 'With Physics'];
 var listening = ['the screams of orphans', 'the voices in my head', 'the haters'];
 var watching = ['you cry', 'the sun bake'];
+var levels = [['Put on and adjust string','Wind string','Basic throw','Around the corner','Walk the dog','The creeper','The elevator'],
+							['Throw the baby','Itzy-Bitzy baby','Jamacain flag','Rock the baby','One handed star','Eiffel Tower','Spelling Yo','The cross','Big Tokyo tower','Two handed star','3D spaceship','British flag','Four-Leaf clover','Rock the baby on the Eiffel Tower','Dog bite','Darth Vader.'],
+							['Breakaway','Terminology','Man on flying trapeze','Man on flying trapeze corrections','Pinwheel','Brain scrambler','Brain twister','Reverse flip front mount','Side mount flips','Split bottom mount','Man on the flying trapeze and his brother','Double or nothing','Houdini mount','Under or nothing','One and a half side mount','Brent','Cross arm trapeze','Crazy 8','Kamikaze mount','Wrist mount'],
+							['Halley\'s commet','Double trapeze','Zipper','Regenerations','Barrell roll','Split the atom','Skin the gerbal','Ripcord','Keychain','Buddha\'s Revenge','Superflow','Cold fusion','Rewind','Eli Hops','Boomerang','PopsvSnap GT','Wasabi GT','Figure 8','Whip to kamakazi mount','Locomotion','Catch style binds','Cross capture','Keymaker whip','1.5 hook','TMNT cafe','Mach 5','Magic drop and shockwave','Ninja vanish','McPhee tower','Satoshi tower','Slack trapeze','Jade whip','Iron whip','Grey poupon','Chopsticks switch','Chopsticks double or nothing','Chopsticks tower','Chop suey','Wax on, wax off','Titanium chopsticks','Gondola','The matrix','Roller coaster','Hydrogen bomb','Revolutions','Brent stole','Seasick','Pop n\' fresh','Boingy Boing','Gyroscopic flop','Hot grind','Kwyjibo','Calypso','Green revolution','Lord of the flies','Cross arm trapeze','Follow','Instant magic knot','Follow trapeze','Serpentine','Monochrome','Bouncy castle','Schmidt twist','Quantum slack','Ghost neck','Funny bone','Horizontal basics','Horizontal skin the gerbil','Mobius maneuver','Simple geometry','Horizontal circular Eli Hops','Horizontal behind the back','Horizontal Black Hops'],
+							['none'],
+							['none'],
+							['none']];
+var links = ['https://yoyotricks.com/yoyo-tricks/beginner-tricks/','https://yoyotricks.com/yoyo-tricks/picture-tricks/','https://yoyotricks.com/yoyo-tricks/string-trick-basics/','https://yoyotricks.com/yoyo-tricks/string-tricks/','https://yoyotricks.com/yoyo-tricks/unresponsive/','https://yoyotricks.com/yoyo-tricks/long-string-tricks/','none'];
+var roll = ['486667008881197066','486668435615383553','486668437360476177','486668450354429952','486668447833391137','486668446428299274','491801015436181504'];
 var a = 0
 var b = 0
 var trickCom = ['level']
@@ -246,135 +255,101 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		break;
 		case 'LEVEL':
-			let topRoleID = '486667008881197066';
+			let topRoleID = '';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
-				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 11 && bot.servers['429446593792442369'].roles[member.roles[iooof]].position > 4){
-					topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
+				if (bot.servers['429446593792442369'].roles[member.roles[iooof]].position < 17){
+					if (roll.includes(bot.servers['429446593792442369'].roles[member.roles[iooof]].id)){
+						topRoleID = bot.servers['429446593792442369'].roles[member.roles[iooof]].id
+					}
 				}
 			}
-			if (topRoleID == '486667008881197066'){
+			var roleSearch = 0;
+			var finalRole = -1;
+			while (roleSearch < levels.length){
+				if (roll[roleSearch] == topRoleID){
+					finalRole = roleSearch;
+				}
+				roleSearch = roleSearch + 1;
+			}
+			if (finalRole >= 0){
+				var outa = [];
+				var outb = [];
+				var outc = [];
+				a = 0;
+				while (a < levels[finalRole].length){
+					if (a % 3 == 0){
+						outa[outa.length] = levels[finalRole][a];
+					}
+					if (a % 3 == 1){
+						outb[outb.length] = levels[finalRole][a];
+					}
+					if (a % 3 == 2){
+						outc[outc.length] = levels[finalRole][a];
+					}
+					a = a + 1;
+				}
+				var outd = [];
+				var oute = [];
+				var outf = [];
+				var outg = '';
+				var outh = '';
+				var outi = '';
+				a = 0;
+				b = 0;
+				while (a < outa.length){
+					b = 0;
+					outg = '';
+					outh = '';
+					outi = '';
+					while (b < 10){
+						if (outa.length > 10*a + b){
+							outg = outg + '\n' + outa[10*a + b];
+						}
+						if (outb.length > 10*a + b){
+							outh = outh + '\n' + outb[10*a + b];
+						}
+						if (outc.length > 10*a + b){
+							outi = outi + '\n' + outc[10*a + b];
+						}
+						b = b + 1;
+					}
+					outd[a] = outg;
+					oute[a] = outh;
+					outf[a] = outi;
+					a = a + 1;
+				}
+				a = new Date()
 				bot.sendMessage({
 					to: channelID,
-					 embed: {
+					embed: {
+						title: 'Level ' + (finalRole + 1),
+						timestamp: a,
+						author: {
+							name: 'Knot Ready For This',
+							url: 'https://yoyotricks.com/',
+							icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
+						},
+						footer: {
+							icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
+							text: 'Level Command',
+						},
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-						title: "**Level 1**",
 						fields: [
-						    {
-							name: "The steps necesary for getting to level 2 are:",
-							value: '\nPut on and adjust string.\nWind string.\nBasic throw.\nAround the corner.\nWalk the dog.\nThe creeper.\nThe elevator.\nThese tricks can be found [here](\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/)'
-						    }
-							]
-					 }
-				});
-			} else if (topRoleID == '486668435615383553'){
-				bot.sendMessage({
-					to: channelID,
-					 embed: {
-						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-						title: "**Level 2**",
-						fields: [
-						    {
-							name: "The steps necesary for getting to level 3 are:",
-							value: '\nThrow the baby.\nItzy-Bitzy baby.\nJamacain flag.\nRock the baby.\nOne handed star.\nEiffel Tower.\nSpelling Yo.\nThe cross.\nBig Tokyo tower.\nTwo handed star\n3D spaceship.\nBritish flag.\nFour-Leaf clover.\nRock the baby on the Eiffel Tower.\nDog bite.\nDarth Vader.\nThese tricks can be found [here](\nhttps://yoyotricks.com/yoyo-tricks/beginner-tricks/)'
-						    }
-							]
-					 }
-				});
-			} else if (topRoleID == '486668437360476177'){
-				bot.sendMessage({
-					to: channelID,
-					 embed: {
-						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-						title: "**Level 3**",
-						fields: [
-						    {
-							name: "The steps necesary for getting to level 4 are:",
-							value: '\nBreakaway.\nTerminology.\nMan on flying trapeze.\nMan on flying trapeze corrections.\nPinwheel.\nBrain scrambler.\nBrain twister.\nReverse flip front mount.\nSide mount flips.\nSplit bottom mount.\nMan on the flying trapeze and his brother.\nDouble or nothing.\nHoudini mount.\nUnder or nothing.\nOne and a half side mount.\nBrent.\nCross arm trapeze.\nCrazy 8.\nKamikaze mount.\nWrist mount.\nThese tricks can be found [here](\nhttps://yoyotricks.com/yoyo-tricks/string-trick-basics/)'
-						    }
-							]
-					 }
-				});
-			} else if (topRoleID == '486668450354429952'){
-				bot.sendMessage({
-					to: channelID,
-					 embed: {
-						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-                        author: {
-                            name: 'Knot Ready For This',
-                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
-                        },
-                        footer: {
-                            icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
-                            text: 'Try to master some of these tricks',
-                        },
-                        timestamp: new Date(),
-						title: '**Level 4**',
-                        description: 'Unresponsive basics',
-						fields: [
-						    {
-							    name: 'Not a Topic',
-                                inline: true,
-							    value: 'Halley\'s commet.\nDouble trapeze.\nZipper.\nRegenerations.\nBarrell roll.\nSplit the atom.\nSkin the gerbal.\nRipcord.\nKeychain.\nBuddha\'s Revenge.\nSuperflow.\nCold fusion.\nRewind.\nEli Hops.\n',
-                            },
-                            {
-                                name: 'Not a Group',
-                                inline: true,
-                                value: 'Boomerang.\nPopsvSnap GT.\nWasabi GT.\nFigure 8.\nWhip to kamakazi mount.\nLocomotion.\nCatch style binds.\nCross capture.\nKeymaker whip.\n1.5 hook.\nTMNT cafe.\nMach 5.\nMagic drop and shockwave.\nNinja vanish.',
-                            },
-                            {
-                                name: 'Not a Section',
-                                inline: true,
-                                value: 'McPhee tower.\nSatoshi tower.\nSlack trapeze.\nJade whip.\nIron whip.\nGrey poupon.\nChopsticks switch.\nChopsticks double or nothing.\nChopsticks tower.\nChop suey.\nWax on, wax off.\nTitanium chopsticks.\nGondola.\nThe matrix.'
-						    }
-							]}
-				}, function(err, res){
-					bot.sendMessage({
-						to: channelID,
-						 embed: {
-							color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-							title: "**Level 4**",
-							fields: [
-							    {
-								name: "The steps necesary for getting to level 5 (continued) are:",
-								value: 'Roller coaster.\nHydrogen bomb.\nRevolutions.\nBrent stole.\nSeasick.\nPop n\' fresh.\nBoingy Boing.\nGyroscopic flop.\nHot grind.\nKwyjibo.\nCalypso.\nGreen revolution.\nLord of the flies.\nCross arm trapeze.\nFollow.\nInstant magic knot.\nFollow trapeze.\nSerpentine.\nMonochrome.\nBouncy castle.\nSchmidt twist.\nQuantum slack.\nGhost neck.\nFunny bone.\nHorizontal basics.\nHorizontal skin the gerbil.\nMobius maneuver.\nSimple geometry.\nHorizontal circular Eli Hops.\nHorizontal behind the back.\nHorizontal Black Hops.\nThese tricks can be found [here](\nhttps://yoyotricks.com/yoyo-tricks/string-tricks/)'
-							    }
-								]
-						 }
-					});
-				});
-			} else if (topRoleID == '486668447833391137'){
-				bot.sendMessage({
-					to: channelID,
-					 embed: {
-						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-						title: "**Level 5**",
-						fields: [
-						    {
-							name: "The steps necesary for getting to level 6 are:",
-							value: 'Not done yet'
-						    }
-							]
-					 }
-				});
-			} else if (topRoleID == '486668446428299274'){
-				bot.sendMessage({
-					to: channelID,
-					 embed: {
-						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-						title: "**Level 6**",
-						fields: [
-						    {
-							name: "The steps necesary for getting to level 7 are:",
-							value: 'Not done yet'
-						    }
-							]
-					 }
-				});
-			} else if (topRoleID == '491801015436181504'){
-				bot.sendMessage({
-					to: channelID,
-					message: 'You are a top-level Yoyo master. Nothing much I can do to help you. The only way to get better is to do a Chinese Yo-Yo. Or you can choose to not listen to Bret. (<@486985623161274378>)'
-				});
+							{
+								name: 'Column 1',
+								value: outd[0],
+								inline: true,
+							},
+							{
+								name: 'Column 2',
+								value: oute[0],
+								inline: true,
+							},
+							{
+								name: 'Column 3',
+								value: outf[0],
+								inline: true
+				}]}})
 			}
 		break;
             case 'PING':
