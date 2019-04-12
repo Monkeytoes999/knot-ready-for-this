@@ -258,9 +258,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var outg = '';
 				var outh = '';
 				var outi = '';
-				var outD = [];
-				var outE = [];
-				var outF = [];
 				a = 0;
 				var b = 0;
 				while (a < outa.length){
@@ -268,27 +265,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					outg = '';
 					outh = '';
 					outi = '';
-					outD[a] = 20;
-					outE[a] = 20;
-					outF[a] = 20;
 					while (b < 10){
 						if (outa.length > 10*a + b){
 							outg = outg + '\n' + outa[10*a + b];
-							if (outa[10*a + b].length > outD[a]){
-								outD[a] = outa[10*a + b].length;
-							}
 						}
 						if (outb.length > 10*a + b){
 							outh = outh + '\n' + outb[10*a + b];
-							if (outb[10*a + b].length > outE[a]){
-								outE[a] = outb[10*a + b].length;
-							}
 						}
 						if (outc.length > 10*a + b){
 							outi = outi + '\n' + outc[10*a + b];
-							if (outc[10*a + b].length > outF[a]){
-								outF[a] = outc[10*a + b].length;
-							}
 						}
 						b = b + 1;
 					}
@@ -298,12 +283,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					a = a + 1;
 				}
 				var letter = '0';
-				var baseline = '';
-				b = 0;
-				while (b < 50){
-					baseline = baseline + letter;
-					b = b + 1;
-				}
 				a = new Date()
 				bot.sendMessage({
 					to: channelID,
@@ -322,17 +301,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
 						fields: [
 							{
-								name: baseline.substring(0, outD[0] + 1),
+								name: 'Column 1',
 								value: outd[0],
 								inline: true,
 							},
 							{
-								name: baseline.substring(0, outE[0] + 1),
+								name: 'Column 2',
 								value: oute[0],
 								inline: true,
 							},
 							{
-								name: baseline.substring(0, outF[0] + 1),
+								name: 'Column 3',
 								value: outf[0],
 								inline: true
 				}]}})
