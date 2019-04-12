@@ -322,6 +322,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					message: 'This command is currently in testing phases. Please wait.'
 				});
 			}
+			break;
 		case 'LEVEL':
 			let topRoleID = '';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
