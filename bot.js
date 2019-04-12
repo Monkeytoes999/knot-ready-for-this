@@ -259,6 +259,69 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			}
 		break;
+		case 'CHECKLIST':
+			if (bot.server['429446593792442369'].roles[member.roles[0]] = '486676069492195348'){
+				let peeps = [];
+				let peepsIds = [];
+				let peepsChannels = [];
+				bot.getMessage({
+					channelID: '557342910576721920',
+					messageID: '566070246860128267'
+				}, function(err,res){
+					let oororo = res.content;
+					for(let idx = 0; oororo.includes(','); oororo = oororo.substring(oororo.indexOf(',') + 2)){
+						peeps.push(oororo.substring(0, oororo.substring(',')));
+					}
+					peeps.push(oororo)
+				});
+				bot.getMessage({
+					channelID: '557342910576721920',
+					messageID: '566070406138691605'
+				}, function(err,res){
+					let oororor = res.content;
+					for(let idx = 0; oororor.includes(','); oororor = oororor.substring(oororor.indexOf(',') + 2)){
+						peeps.push(oororor.substring(0, oororor.substring(',')));
+					}
+					peepsIds.push(oororor)
+				});
+				bot.getMessage({
+					channelID: '557342910576721920',
+					messageID: '566070246860128267'
+				}, function(err,res){
+					let oorororr = res.content;
+					for(let idx = 0; oorororr.includes(','); oorororr = oorororr.substring(oorororr.indexOf(',') + 2)){
+						peeps.push(oorororr.substring(0, oorororr.substring(',')));
+					}
+					peepsChannels.push(oorororr)
+				});
+				if (evt.d.mentions[0] != undefined){
+					let run = true;
+					let idx = 0;
+					for (idx = 0; idx < peepsIds.length && run; idx++){
+						if (evt.d.mentions[0].id = peepsIds[idx]){
+							run = false;
+						}
+					}
+					if (run = false){
+						bot.getMessage({
+							channelID: '557342935390355456',
+							messageID: peepsChannels[idx]
+						}, function(errr, ress){
+							if(ress.content.substring(ress.indexOf('n'), ress.indexOf('n') + 1) = 'Y'){
+								bot.sendMessage({
+									to: channelID,
+									message: 'Working'
+								});
+							}
+						});
+					}
+				}
+			} else {
+				bot.sendMessage({
+					to: channelID,
+					message: 'This command is currently in testing phases. Please wait.
+				});
+			}
 		case 'LEVEL':
 			let topRoleID = '';
 			for (var iooof = 0; iooof < member.roles.length; iooof++){
