@@ -319,7 +319,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			} else {
 				bot.sendMessage({
 					to: channelID,
-					message: 'This command is currently in testing phases. Please wait.
+					message: 'This command is currently in testing phases. Please wait.'
 				});
 			}
 		case 'LEVEL':
