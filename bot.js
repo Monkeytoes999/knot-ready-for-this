@@ -323,6 +323,66 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Pong!'
                 });
             break;
+		case 'HELP':
+                if (message == 'HELP'){
+                    var parta = ''
+                    var partb = ''
+                    var partc = ''
+                    a = 0
+                    while (a < trickCom.length || a < infoCom.length || a < imporCom.length){
+                        if (a < trickCom.length){
+                            parta = parta + ' `' + trickCom[a] + '`'
+                        }
+                        if (a < infoCom.length){
+                            partb = partb + ' `' + infoCom[a] + '`'
+                        }
+                        if (a < imporCom.length){
+                            partc = partc + ' `' + imporCom[a] + '`'
+                        }
+                        a = a + 1
+                    }
+                    bot.sendMessage({
+                        to: channelID,
+                        embed: {
+                            title: 'This is the help section. Add `yo` to a command to use it.',
+                            color: 3050971,
+                            fields: [
+                                {
+                                    name: 'Help with tricks',
+                                    value: parta,
+                                },
+                                {
+                                    name: 'Informational Commands',
+                                    value: partb,
+                                },
+                                {
+                                    name: 'Important Announcement Commands',
+                                    value: partc
+                                }
+                            ]
+                        }})
+                }
+                if (message == 'HELP ROLEINFO'){
+                    bot.sendMessage({
+                        to: channelID,
+                        message: '```md\nyo roleInfo {role}\n==================\n< role >\nThis can br a mention or ID of a role.\n< Purpose >\nThis will say the important information about a role.\n```'})
+                }
+                if (message == 'HELP PIN'){
+                    bot.sendMessage({
+                        to: channelID,
+                        message: '```md\nyo pin {message}\n================\n< message >\nThis message will be pinned along with the user that sent it.\n< Purpose >\nThis will pin an important message to a channel.\n```'})
+                }
+                if (message == 'HELP LEVEL'){
+                    bot.sendMessage({
+                        to: channelID,
+                        message: '```md\nyo level\n========\n< Purpose >\nThis will tell you your level and the tricks needed to advance in level.\n```'})
+                }
+                if (message == 'HELP HELP'){
+                    bot.sendMessage({
+                        to: channelID,
+                        message: '```md\nyo help {command}\n=================\n< command >\nPut the command in question here.\nLeaving this blank will list all commands.\n< Purpose >\nThis will show the syntax and purpose of the command.\n```'})
+                }
+            break;
          }
      }
 });
