@@ -26,7 +26,7 @@ var a = 0
 var b = 0
 var trickCom = ['level']
 var imporCom = ['pin']
-var infoCom = ['help','roleInfo']
+var infoCom = ['help']
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -162,70 +162,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 bot.pinMessage({
                     channelID: channelID,
                     messageID: res.id})})
-        break;
-        case 'ROLEINFO':
-            var permi = 0
-            if (message.substring(9, 12) == '<@&'){
-                permi = message.substring(12, 30)
-            }
-            if (message.substring(9, 12) != '<@&'){
-                permi = message.substring(9, 27)
-            }
-            var roleUserID = permi
-	    if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID) != undefined){
-	            permi = Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID)._permissions
-	    }
-	    if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID) == undefined){
-	            console.log(Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID))
-	    }
-            var binaryPerm = []
-            var count = 31
-            while (count > 0){
-                count = count - 1
-                binaryPerm[binaryPerm.length] = false
-                if (permi >= 2**count){
-                    permi = permi - 2**count
-                    binaryPerm[binaryPerm.length - 1] = true
-                }
-            }
-            var roleString = ''
-            a = binaryPerm.length
-            b = 0
-            while (a > 0){
-                a = a - 1
-                if (binaryPerm[binaryPerm.length - a] && b < 9){
-                    b = b + 1
-                    roleString = roleString + '\n          ' + b.toString() + ': ' + roleList[a - 1]
-                }
-                if (binaryPerm[binaryPerm.length - a] && b >= 9){
-                    b = b + 1
-                    roleString = roleString + '\n         ' + b.toString() + ': ' + roleList[a - 1]
-                }
-            }
-            var roleHelper = '```prolog\n       Name: "' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).name + '"\n         ID: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).id + '\n   Position: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).position + '\n    Managed: '
-            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).managed){
-                roleHelper = roleHelper + 'yes'
-            }
-            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).managed == false){
-                roleHelper = roleHelper + 'no'
-            }
-            roleHelper = roleHelper + '\nMentionable: '
-            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).mentionable){
-                roleHelper = roleHelper + 'yes'
-            }
-            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).mentionable == false){
-                roleHelper = roleHelper + 'no'
-            }
-            roleHelper = roleHelper + '\n      Hoist: '
-            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).hoist){
-                roleHelper = roleHelper + 'displayed seperately'
-            }
-            if (Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).hoist == false){
-                roleHelper = roleHelper + 'not displayed seperately'
-	    }
-            bot.sendMessage({
-                to: channelID,
-                message: roleHelper + '\n      Color: ' + Object.values(bot.servers[serverID].roles).find(r => r.id  == roleUserID).color + '\nPermissions:' + roleString.toLowerCase() + '\n```'})
         break;
 		case 'GOAWAY':
 			bot.sendMessage({
@@ -388,37 +324,41 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					a = a + 1;
 				}
 				a = new Date()
-				bot.sendMessage({
-					to: channelID,
-					embed: {
-						title: 'Level ' + (finalRole + 1),
-						timestamp: a,
-						author: {
-							name: 'Knot Ready For This',
-							url: 'https://yoyotricks.com/',
-							icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
-						},
-						footer: {
-							icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
-							text: 'Level Command',
-						},
-						color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
-						fields: [
-							{
-								name: 'Column 1',
-								value: outd[0],
-								inline: true,
+				b = 0
+				while (b < outd.length){
+					bot.sendMessage({
+						to: channelID,
+						embed: {
+							title: 'Level ' + (finalRole + 1),
+							timestamp: a,
+							author: {
+								name: 'Knot Ready For This',
+								url: 'https://yoyotricks.com/',
+								icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
 							},
-							{
-								name: 'Column 2',
-								value: oute[0],
-								inline: true,
+							footer: {
+								icon_url: 'https://cdn.discordapp.com/avatars/513203673644531712/' + bot.users['513203673644531712'].avatar + '.png?size=32',
+								text: 'Level Command',
 							},
+							color: Object.values(bot.servers[serverID].roles).find(r => r.id  == topRoleID).color,
+							fields: [
 							{
-								name: 'Column 3',
-								value: outf[0],
-								inline: true
-				}]}})
+									name: 'Column 1',
+									value: outd[b],
+									inline: true,
+								},
+								{
+									name: 'Column 2',
+									value: oute[b],
+									inline: true,
+								},
+								{
+									name: 'Column 3',
+									value: outf[b],
+									inline: true
+					}]}})
+					b = b + 1
+				}
 			}
 		break;
             case 'PING':
