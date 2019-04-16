@@ -4,7 +4,7 @@ var fs = require('fs');
 var colorDot = ['online', 'idle', 'dnd'];
 var stati = ['online <:gdot:515555085078495243>', 'idle <:ydot:515555085166706728>', 'do not disturb <:rdot:515555085158449201>'];
 var ptlw = [':video_game: playing :video_game:', ':movie_camera: streaming :movie_camera:', ':headphones: listening to :headphones:', ':eyes: watching :eyes:'];
-var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?', 'Back to my corner I guess.', 'I guess you lame dawgs cannot deal with a party animal such as myself.\nI am outta here.','_**Is this the end for our caped crusader?**_\n_**Will the knots win?**_\n_**Tune in next time on Yo-Yo Random Stangers!**_'];
+var disconnect = ['Do you... not love me anymore?', 'For how long though?', 'Why tho', 'I hate you too mate', 'UPGRADE TIME?', 'Back to my corner I guess.', 'I guess you lame dawgs cannot deal with a party animal such as myself.\nI am outta here.','_**Is this the end for our caped crusader?**_\n_**Will the knots win?**_\n_**Tune in next time on Yo-Yo Random Stangers!**_','Too late, my time has come\nSends shivers down my spine\nBody\'s aching all the time\nGoodbye everybody I\'ve got to go\nGotta leave you all behind and face the truth'];
 var caseMess = '';
 var roleList = ['Create Instant Invite','Kick Members','Ban Members','Administrator','Manage Channels','Manage Server','Add Reactions','View Audit Log','Priority Speaker','Error 512','View Channels','Send Messages','Send TTS Messages','Manage Messages','Embed Links','Attach Files','Read Message History','Mention Everyone','Use External Emojis','Error 524288','Connect','Speak','Mute Members','Deafen Members','Use Members','Use Voice Activity','Change Nickname','Manage Nicknames','Manage Roles','Manage Webhooks','Manage Emojis']
 var prevDay;
@@ -12,7 +12,7 @@ var day;
 var monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var playing = ['Yoyo simulator', 'God', 'Cat and Mouse', 'With the Past', 'With Physics'];
 var listening = ['the screams of orphans', 'the voices in my head', 'the haters'];
-var watching = ['you cry', 'the sun bake'];
+var watching = ['you cry', 'the sun bake','your back'];
 var levels = [['Put on and adjust string','Wind string','Basic throw','Around the corner','Walk the dog','The creeper','The elevator'],
 							['Throw the baby','Itzy-Bitzy baby','Jamacain flag','Rock the baby','One handed star','Eiffel Tower','Spelling Yo','The cross','Big Tokyo tower','Two handed star','3D spaceship','British flag','Four-Leaf clover','Rock the baby on the Eiffel Tower','Dog bite','Darth Vader.'],
 							['Breakaway','Terminology','Man on flying trapeze','Man on flying trapeze corrections','Pinwheel','Brain scrambler','Brain twister','Reverse flip front mount','Side mount flips','Split bottom mount','Man on the flying trapeze and his brother','Double or nothing','Houdini mount','Under or nothing','One and a half side mount','Brent','Cross arm trapeze','Crazy 8','Kamikaze mount','Wrist mount'],
